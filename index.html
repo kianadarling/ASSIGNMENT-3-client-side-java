@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piza Order Form</title>
+    <link href="css/styles.css" rel="stylesheet"><!--Linking external stylesheet-->
+    <script src="Scripts/index.js" defer></script><!-- linking the index.js file-->
+    
+
+</head>
+<body>
+    <header>
+        <h1>Order Your Pizza</h1>
+    </header>
+
+    <main>
+        <form action="order_confirmation.php" method="get"><!--form for ordering pizza-->
+            <fieldset>
+                <legend>Number of Pizzas</legend>
+                <label for="pizzaCount">How many pizzas would you like to order?</label>
+                <!--Input for number of pizza-->
+                <input type="number" id="pizzaCount" name="pizzaCount" min="1" max="10" required>
+            </fieldset>
+            <!--label for slectings-->
+            <fieldset>
+                <legend>Pizza Details</legend>
+                <label for="pizzaSize">Select Pizza Size:</label>
+                <select id="pizzaSize" name="pizzaSize">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+                <label>Choose Pizza Shape:</label>
+                <br>
+                <input type="radio" id="roundShape" name="pizzaShape" value="round" required>
+                <label for="roundShape">Round</label>
+                <input type="radio" id="squareShape" name="pizzaShape" value="square">
+                <label for="squareShape">Square</label>
+                <br>
+                <br>
+                
+                <label for="toppings">Select Toppings:</label>
+                <br>
+                <label>Toppings:</label>
+                <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label>
+                <input type="checkbox" id="onions" name="toppings[]" value="onions">
+                <label for="onions">Onions</label>
+                <input type="checkbox" id="olives" name="toppings[]" value="olives">
+                <label for="olives">Olives</label>
+                <label>Choose Crust Type:</label>
+                <input type="radio" id="deepDish" name="crustType" value="deepDish" required>
+                <label for="deepDish">Deep Dish</label>
+                <input type="radio" id="thinCrust" name="crustType" value="thinCrust">
+                <label for="thinCrust">Thin Crust</label>
+                <input type="radio" id="otherCrust" name="crustType" value="other">
+                <label for="otherCrust">Other</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Options</legend>
+                <label for="deliveryMethod">Choose Delivery Option:</label>
+                <select id="deliveryMethod" name="deliveryMethod">
+                    <option value="takeout">Take Out</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="eatIn">Eat In</option>
+                </select>
+            </fieldset>
+            <!--fieldest for contact information-->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <!--fieldest for additional comments-->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Clear Form">
+        </form>
+    </main>
+
+    <footer>
+        &copy; 2023 Pizza Aphrodite
+    </footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/*Css styles for our pizza website with a vegetarian theme*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer, main {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header {
+    background-color: #4caf50; /* Vegetarian green */
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+h1 small {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="color"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4caf50;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
